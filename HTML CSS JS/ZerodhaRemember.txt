@@ -1,0 +1,48 @@
+<!--https://zerodha.com/static/images/logo.svg-->
+<!--https://zerodha.com/static/images/landing.png-->
+<html>
+
+<head>
+
+<title>
+Remembering Zerodha
+</title>
+
+</head>
+
+<body>
+
+<div style="display:flex;justify-content:space-between;padding: 0px 100px 0px 100px;box-shadow:1px 2px 4px #eeee">
+
+<img src="https://zerodha.com/static/images/logo.svg" width="80" height="20"/>
+
+<div style="display:flex;justify-content:space-between">
+    <div style="padding:0px 10px 0px 10px"> Product </div>
+    <div style="padding:0px 10px 0px 10px"> About </div>
+    <div style="padding:0px 10px 0px 10px"> Pricing </div>
+    <div style="padding:0px 10px 0px 10px"> Support </div>
+    <div style="padding:0px 10px 0px 10px"> SignUp </div>
+</div>
+</div>
+
+<br/>
+<img style="display:flex;justify-content:center" width="1200" src="https://zerodha.com/static/images/landing.png" >
+
+<div style="display:flex;justify-content:center">
+<h2>INvesting is the new future</h2>
+<br?	>
+<h1>Come join us</h1>
+
+</div >
+
+<div  style="display:flex;justify-content:center">
+<div style="color:white;background:blue;border-radius:10px;padding:5px 20px 5px 20px">
+SignUp
+</div>
+</div>
+
+
+
+</body>
+
+</html>
