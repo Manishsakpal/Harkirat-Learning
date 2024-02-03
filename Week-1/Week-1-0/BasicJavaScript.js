@@ -255,3 +255,22 @@ console.log("After reduce value we get",ForLoopArraySumReduce_);
 
 
 
+// Call back function
+function add(a,b){
+    return a+b
+}
+function sub(a,b){
+    return a-b
+}
+
+function CalBackFunction(Para1,para2,paraFunc3){
+    return paraFunc3(Para1,para2);
+}
+
+
+console.log("Cal Back Function",CalBackFunction(10,20,add));
+
+console.log("Cal Back Function",CalBackFunction(10,20,sub));
+
+
+
