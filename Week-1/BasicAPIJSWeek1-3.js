@@ -182,9 +182,49 @@ function sortExample(arr) {
     console.log("Original Array:", arr);
   
     arr.sort(function(a, b) {
-      return a + b;
+      return a - b;
     });
     console.log("After sort:", arr);
   }
   sortExample([5,3, 2, 5, 4, 1]);
   
+
+
+
+////// Level 2
+
+
+
+class StudentAsClassName{
+    constructor(Name,Std,Division){
+        this.Name=Name;
+        this.Std=Std;
+        this.Division=Division;
+    }
+
+    showData(Time=1){
+        console.log(`writing it ${this.Name} ${this.Std} ${this.Division}`.repeat(Time))
+    }
+
+    static StaticMethod(Time=1){
+        console.log(`writing it ${this.Name} ${this.Std} ${this.Division}`.repeat(Time))
+    }
+
+}
+
+
+var ObjOfClass= new StudentAsClassName("Manish",2,'f3');
+ObjOfClass.showData();
+console.log(StudentAsClassName.StaticMethod(4));
+
+
+
+
+
+
+var currentTimeStamp= new Date();
+console.log(currentTimeStamp.getDate())
+console.log(currentTimeStamp.getTime())
+console.log(currentTimeStamp.getFullYear())
+console.log(currentTimeStamp.getDay())
+console.log(currentTimeStamp.getMonth()+1)
