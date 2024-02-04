@@ -220,7 +220,7 @@ console.log(StudentAsClassName.StaticMethod(4));
 
 
 
-
+///// Time module 
 
 var currentTimeStamp= new Date();
 console.log(currentTimeStamp.getDate())
@@ -228,3 +228,131 @@ console.log(currentTimeStamp.getTime())
 console.log(currentTimeStamp.getFullYear())
 console.log(currentTimeStamp.getDay())
 console.log(currentTimeStamp.getMonth()+1)
+
+
+
+
+
+//// JSON JavaScript object notation
+
+var OBjectVaribale={
+    Name:"Manish",
+    RollNo:10,
+    Division:"3rd"
+}
+
+
+
+var JSonToString= JSON.stringify(OBjectVaribale);
+console.log("Json to string conversion",JSonToString);
+console.log("String to JSON conversion",JSON.parse(JSonToString))
+
+
+
+//// math global function
+
+
+
+var MathVar= Math.sqrt(9)
+console.log("Valu here is square root of 9 which is",MathVar)
+
+
+var MathVar= Math.pow(2,3)
+console.log("Valu here is 2^3 which is",MathVar)
+
+
+var MathVar= Math.max(2,3,3,4,6,66)
+console.log("Valu here is MAX from 2,3,3,4,6,66 which is",MathVar)
+
+
+var MathVar= Math.min(2,3,3,4,6,66)
+console.log("Valu here is minimum 2,3,3,4,6,66 which is",MathVar)
+
+console.log([2,3,3,4,6,66].toString().slice(0,-1))
+var MathVar= Math.min([2,3,3,4,6,66].map((z)=>parseInt(z)))
+console.log("Valu here is minimum 2,3,3,4,6,66 which is",MathVar)
+
+
+
+var MathVar= Math.round(2.3)
+console.log("Valu here is round of 2.3 which is",MathVar)
+
+
+var MathVar= Math.round(2.3)
+console.log("Valu here is round of 2.3 which is",MathVar)
+
+
+var MathVar= Math.round(2.6)
+console.log("Valu here is round of 2.6 which is",MathVar)
+
+
+var MathVar= Math.round(2.5)
+console.log("Valu here is round of 2.5 which is",MathVar)
+
+
+
+var MathVar= Math.floor(2.3)
+console.log("Valu here is floor of 2.3 which is",MathVar)
+
+
+var MathVar= Math.floor(2.3)
+console.log("Valu here is floor of 2.3 which is",MathVar)
+
+
+var MathVar= Math.floor(2.6)
+console.log("Valu here is floor of 2.6 which is",MathVar)
+
+
+var MathVar= Math.floor(2.5)
+console.log("Valu here is floor of 2.5 which is",MathVar)
+
+
+
+var MathVar= Math.ceil(2.3)
+console.log("Valu here is ceil of 2.3 which is",MathVar)
+
+
+var MathVar= Math.ceil(2.3)
+console.log("Valu here is ceil of 2.3 which is",MathVar)
+
+
+var MathVar= Math.ceil(2.6)
+console.log("Valu here is ceil of 2.6 which is",MathVar)
+
+
+var MathVar= Math.ceil(2.5)
+console.log("Valu here is ceil of 2.5 which is",MathVar)
+
+
+var MathVar= Math.random()*20
+console.log("Valu here is Random of 2.5 which is",MathVar)
+
+
+
+
+//// Object global functions
+
+
+var ObjVar={
+    "key1":"Value1",
+    "key2":"Value2",
+    "key3":"Value3",
+}
+
+function ObjectGolFunction(ObjVar){
+    var fObjVar=Object.keys(ObjVar)
+    console.log(ObjVar," has Value of key ",fObjVar)
+    var fObjVar=Object.values(ObjVar)
+    console.log(ObjVar," has Value of key ",fObjVar)
+    var fObjVar=Object.entries(ObjVar)
+    console.log(ObjVar," has Value of key ",fObjVar)
+    var fObjVar=ObjVar.hasOwnProperty("key1")
+    console.log(ObjVar," has Value of key ",fObjVar)
+    var fObjVar=Object.assign({},ObjVar,{"Key44":"Value44"})
+    console.log(ObjVar," has Value of key ",fObjVar)
+    ObjVar["Key777"]="Value777"
+    console.log(ObjVar," has Value of key ",fObjVar)
+    
+
+}
+ObjectGolFunction(ObjVar)
