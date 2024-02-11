@@ -356,3 +356,8 @@ function ObjectGolFunction(ObjVar){
 
 }
 ObjectGolFunction(ObjVar)
+
+
+console.log("Manish".split("").reverse().join(""))
+
+
