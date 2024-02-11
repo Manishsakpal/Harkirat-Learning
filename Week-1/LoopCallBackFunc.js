@@ -31,3 +31,5 @@ function callbacksuporter(functcallback,ParaONe,ParaTwo){
 callbacksuporter(function1,"Manish","Sakpal")
 
 callbacksuporter(function2,"Sakpal","Manish")
+
+
