@@ -1,0 +1,64 @@
+
+
+
+
+// difference between git and github
+// git is a local version control manager install on the local machine
+// wher as github is cloud based repository maintaining version manager where it keep tracks on every changes made
+
+// initiate git this will create a .git file to manage all git config
+git init
+
+// add the remote path to system know variable, where git indicates its a git command, remote says remote path, add say add the path , and origin says after me will be the url for the remotely access  
+git remote add origin "https://github.com/manishsakpal/harkirat-learning.git"
+
+// to check path i properly configured, where as git indicated its a git command, remote says remote url path, -v says show save path init
+git remote -v 
+
+
+// before pushing new changes to the remote repo, make the remote repo first locally access with below command
+git clone "repositoryURL"
+//where git indicate git command apply, clone says clone it from the next parameter input url, url for the repo to made it local 
+
+
+
+git add .
+// git is git command execution, add is to add the file next to me in staging area, . dot it indicate all
+
+
+git commit -m "some message"
+// git command, -m indicated next parameter is a message for the commit i am making and commit message
+
+
+git status
+// will show down all the file ready to move or changes made ready to be push to the remote repo
+
+git push origin master
+// this will push the change visible in the staging area, to the origin we feed in the start also adding as it is master
+
+
+git checkout -b newBranchName 
+// check out to switch the branch -b to create a new branch 
+
+git checkout newBranchName 
+// switch the other branch
+
+
+git merge otherBranch
+// merge to other branch to other branch with the existing branch
+
+git branch
+// to display out the branch on working on
+
+
+git diff otherBranch
+// show the difference with comparing self with other
+
+
+git checkout -d otherBranchToDelete
+// -d to instruct delete the other branch
+
+
+
+
+
