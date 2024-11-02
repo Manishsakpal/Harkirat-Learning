@@ -30,10 +30,14 @@ git commit -m "some message"
 // git command, -m indicated next parameter is a message for the commit i am making and commit message
 
 
+git commit -am "some message to the commit"
+// here a is for all and m is for message with this command with can neglate the git add , with this command all the change commitedvdirectly
+
+
 git status
 // will show down all the file ready to move or changes made ready to be push to the remote repo
 
-git push origin master
+git push origin main //need ti replace the brach you are working on
 // this will push the change visible in the staging area, to the origin we feed in the start also adding as it is master
 
 
@@ -55,7 +59,7 @@ git diff otherBranch
 // show the difference with comparing self with other
 
 
-git checkout -d otherBranchToDelete
+git branch -d otherBranchToDelete
 // -d to instruct delete the other branch
 
 
