@@ -1,0 +1,14 @@
+first video learned about the html working with javascript
+point 2 learned about how api calls through fetch to get the server side rendering of function 
+
+
+
+second video 
+
+here we understand how the child are created using createElement
+and added to the existing element with using the id for where this newly created element needed to be added
+after adding the element or creating element setting the attribute and its value with using setAttribute(attributeName, itsValue)
+
+
+video 2 here we learned about REACT 
+react basically return the difference between current and past data to [D[D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3~[3~[3~delete or do donothingalso REACT DOM uses to structuring the element in the HTML

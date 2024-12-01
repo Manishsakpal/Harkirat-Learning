@@ -1,0 +1,58 @@
+<!-- creating a basic web where a using give to input in the text box and the final out but is displayed at the end -->
+<!-- condition we have added that is don't need to click submit button to get the sumarized value-->
+
+<!--basic html starting document tag-->
+<html> 
+    <!--Header-->
+        <!--Title-->
+    <!--Body-->
+    <!--creating multiple class in the style for styling-->
+    <style>
+
+    </style>
+
+    <!-- below down will contain the actual javasscript function to be executed if any-->
+    <script>
+        // so here basically we are creating 2 function fetch and and actual this own html's logic code also to very fy
+        function summ(para1,para2){
+            return String(Number(para1)+Number(para2))
+        }
+        let TimeOUt
+        function checkAPI(){
+            clearTimeout(TimeOUt)
+            TimeOUt=setTimeout(checkFnAPI,1000)
+            
+        }
+        function checkFnAPI(){
+            
+            console.log("helpManish")
+            const para1=document.getElementById('firstValue').value
+            const para2=document.getElementById('secondValue').value
+            async function getValueFetch(para1,para2){
+
+                console.log("trying on the web",'localhost:3500/sum?a='+para1+'&b='+para2)
+                const SecondPromiseObject = await fetch('http://localhost:3500/sum?a='+para1+'&b='+para2).then((promiseReturn)=>{return promiseReturn.text()}).then((secondPromise)=>{return secondPromise})
+                
+                console.log('Promise returining',SecondPromiseObject)
+                document.getElementById("results").innerHTML=SecondPromiseObject
+                return String(SecondPromiseObject)
+            }
+            const resultValue=summ(para1,para2)
+            const someValue = getValueFetch(para1,para2)
+            console.log("promise returned",someValue)
+            document.getElementById("results").innerHTML=someValue
+        }
+    </script>
+
+    <body>
+        <div>
+            <input onchange="checkAPI()" id="firstValue" type="text" placeholder="firstValue">
+            <br></br>
+            <input onChange="checkAPI()" id="secondValue" type="text" placeholder="secondValue">
+            <br></br>
+            <a id="results">0</a>
+            <br></br>
+            <button onclick="checkAPI()"> checkManually</button>
+        </div>
+    </body>
+</html>

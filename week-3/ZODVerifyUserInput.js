@@ -8,6 +8,5 @@ console.log(zodInstance.safeParse("Manish"))
  
 const zodSecondInstance=ZODHere.object({key: ZODHere.string(),value:ZODHere.number()})
 
-// Example usage
-const result = zodSecondInstance.safeParse({ key: '5', value: 5 });
-console.log(result);
+console.log(zodSecondInstance.safeParse({'5':5}))
+

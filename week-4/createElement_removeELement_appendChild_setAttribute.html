@@ -1,0 +1,78 @@
+<html>
+    <script>
+        let variableForID=0
+        function DeleteElement(para1){
+            document.getElementById(para1).remove()
+        }
+        function createChild(title,description,Id){
+            const addAtElement = document.createElement("div") // elements location to add the the object of DOM 
+            addAtElement.setAttribute("id",variableForID)
+            // we need 3 div 
+            // first div add the title 
+            const elementToAdd= document.createElement("div") // 
+            elementToAdd.innerHTML=title
+            // adding another element
+            const secondElementToAdd= document.createElement("div") // 
+            secondElementToAdd.innerHTML=description
+            // adding third element which is a button 
+            const thirdELementToAdd = document.createElement("button")
+            thirdELementToAdd.setAttribute("onClick","DeleteElement("+Id+")")
+            thirdELementToAdd.innerHTML="In Process.."
+            
+            addAtElement.appendChild(elementToAdd)
+            addAtElement.appendChild(secondElementToAdd)
+            addAtElement.appendChild(thirdELementToAdd)
+            return addAtElement
+        }
+        function addToDo(){
+            // taking 3 elements from the HTML as given in the input box by user
+            const title = document.getElementById("title").value
+            const description =document.getElementById("description").value
+            document.getElementById("newElements").appendChild(createChild(title,description,variableForID))
+            variableForID+=1
+
+        }
+
+        function addJsonFormatedDate(jsonPara){
+            console.log("got the value".jsonPara)
+            jsonPara.forEach((element)=>{
+                const jsonCreatedChild=createChild(element.title,element.description,variableForID)
+                console.log("created by json successfully")
+                document.getElementById("newElements").appendChild(jsonCreatedChild)
+
+                // document.getElementById("newElements").appendChild(createChild(element.title,element.description,variableForID))
+                
+                variableForID+=1
+            })
+        }
+
+    </script>
+    <style>
+
+    </style>
+
+    <body>
+        <div>
+            <input type="text" placeholder="title" id="title"><br></br>
+            <input type="text" placeholder="description" id="description">
+        </div>
+        <div>
+            <button onclick="addToDo()">
+                New todo list
+            </button>
+        </div>
+        <div id="newElements">
+
+        </div>
+    </body>
+
+    <script>
+        window.setInterval(async ()=>{
+            const promiseResolved= await fetch("http://localhost:4500/getJson")
+            const secondPromiseResolved = await promiseResolved.json()
+            console.log(secondPromiseResolved["JsonValue"])
+            addJsonFormatedDate(secondPromiseResolved["JsonValue"])
+        },500)
+        
+    </script>
+</html>
