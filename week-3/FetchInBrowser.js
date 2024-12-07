@@ -10,7 +10,7 @@ async function getData(){
     const FirstPromiseFullFilled=await fetch(urlUnderFetch)
     const secondPromiseFullFilled=await FirstPromiseFullFilled.json()
     return secondPromiseFullFilled
- 
+
 }
 
 console.log(getData().then((para)=>{return para}))
