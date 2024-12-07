@@ -1,0 +1,52 @@
+<html> 
+    <script> 
+        let idForTask=0
+
+        function deletById(para){
+            document.getElementById(para).remove()
+        }
+        function addtask(){
+            const taskNameMain=document.createElement("div")
+            taskNameMain.setAttribute("id",String(idForTask))
+        
+            const taskName=document.createElement("button")
+            taskName.setAttribute("onclick","deletById("+idForTask+")")
+            taskName.innerHTML="Done"
+            const taskName2=document.createElement("div")
+            taskName2.innerHTML="task :"+String(idForTask)
+            
+            
+            taskNameMain.appendChild(taskName)
+            taskNameMain.appendChild(taskName2)
+            
+            
+            document.getElementById("task").appendChild(taskNameMain)
+            idForTask+=1
+
+        }
+        function summing(){
+            // reading value from the id 
+            const firstvalue = document.getElementById("firstValue").value
+            const secondvalue = document.getElementById("secondValue").value
+            document.getElementById("value").innerHTML = Number(firstvalue)+Number(secondvalue)
+        }
+        let resetSetTimeout;
+        function debouncing(){
+            clearTimeout(resetSetTimeout)
+            resetSetTimeout=setTimeout(summing,2000)
+        }
+    </script>
+    <body>
+       <input onchange="debouncing()" id="firstValue" placeholder="first value"> </input>
+       <br>
+       <input onchange="debouncing()" id = "secondValue" placeholder="second Value"></input>
+       <br>
+       <div id="value"> NA </div>
+       <br>
+       <button onclick="addtask()">submit</button>
+       <br>
+       <div id="task"> </div>
+    </body>
+
+
+</html>
