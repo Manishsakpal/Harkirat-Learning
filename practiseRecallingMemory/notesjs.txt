@@ -1,0 +1,47 @@
+var is old way to declare a variable in js ==> can be redeclare >> modifiable >> scope ==> function ==> dynamic type
+let is a moder and preferable in place of var in modern developement >> scope ==>> block scoped ==> can;t redeclare ==> dynamic type
+const as the name indicate its consnt ==> no dynamic type data is fix ==> no redeclare
+
+if else if else
+function :
+normal:
+    function functionname(){}
+    variable = function(){}
+    arrowVariable = ()=>{}  # but this guy has no access to instance this keyword and arguments variable
+
+additional functionalities:
+    arr.find(x=>{return x==findThis}) return the first instance exactly matched as per the given value
+    arr.map(x=>{xreturn +modifyWithNewValue})
+    arr.filter(x=>{retrn x==matchingValuereturnActualValue})
+    arr.slice
+    arr.pop
+    arr.shift
+    arr.unshift
+    arr.push
+    arr.sort((a,b)=>{a-b}) //a-b is assending a+b is decending
+    arr[indexValue]   // to get the value of item on indexValue
+    arr=[...arr,...arr2]  // to add 2 arrays
+    let [a,b,c] = [1,2,3]  // to assign multiple value at a time with diconstructing
+
+additonal for object:
+    obj.key=newValue
+    obj[key]   // to get the value from objects key
+    obj.key=newValue // same to update the value in with the same key
+    delete obj.key // to delete the key and its value from the obj
+    obj = {...obj, ...obj1}  // deconstructing the 2 obj and adding it up in one
+
+callbackfunction:
+    function functionName(functionReference,para){functionReference(para)}
+
+
+class:
+    constructor(classParameter)
+    static variable // accessable to modificatation
+    static functionName
+    set functionVariableName(newValue) // using class functionName = equal keyword
+    get functionVariableName // using class functionName to get the newValue
+
+
+class extend otherclass // inherit other class method to add new abilities from other class
+    super.otherClassMethod(ifparameter)
+
